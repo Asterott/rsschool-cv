@@ -27,6 +27,10 @@ He started teaching in 2021. I have experience in layout. There is a desire to i
 
 ## **Experience**
 ***
+* **Online video course Udemy**
+  + **Wordpress:**  ***css, html*** | [Ссылка на код](https://github.com/Asterott/Wordpress) | 
+  + **Uber:**  ***css, html, sass, bootstrap grid, gulp***  | [Ссылка на код](https://github.com/Asterott/uber) | [Ссылка на сайт](https://asterott.github.io/2021/Uber/) |
+* **Online training on YouTube (Фрилансер по жизни)**
 
 ## **Education**
 ***
