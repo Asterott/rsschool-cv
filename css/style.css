@@ -1,3 +1,64 @@
 * {
-    font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif
+}
+
+.container {
+    max-width: 1440px;
+	margin: 0 auto;
+}
+
+header {
+	height: 63px;
+	background-color: #b9a389;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 50px;
+    margin: 0;
+    list-style-type: none;
+}
+.menu__item {
+}
+.menu__link {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.name {
+    height: 165px;
+    padding: 40px 0px;
+    background-color: #333131;
+}
+
+.name__body {
+    text-align: center;
+    text-transform: uppercase;
+    color:white;
+}
+.name__title {
+    font-size: 40px;
+    font-weight: 700;
+}
+.name__subtitle {
+    font-size: 20px;
+}
+
+.about {
+    height: 200px;
+    padding: 20px;
+}
+.about__img {
+    width: 200px;
+    height: 200px;
+}
+.about__body {
+}
+.about__title {
+}
+.title {
+}
+.about__subtitle {
 }
