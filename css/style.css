@@ -21,7 +21,6 @@ body {
 }
 
 .header {
-	min-height: 63px;
 	background-color: #b9a389;
 }
 
@@ -32,12 +31,16 @@ body {
     margin: 0;
     list-style: none;
 }
-.menu__item {
-}
+
 .menu__link {
 	font-size: 20px;
     color: white;
     text-decoration: none;
+}
+
+.menu__link:hover {
+	color: #333131;
+	transition: 0.5s;
 }
 
 .main {
@@ -62,25 +65,89 @@ body {
 .name__subtitle {
 	font-size: 20px;
 }
-.about {
-	height: 201px;
-    padding: 20px;
-}
-.about__img {
-	width: 20px;
-	height: 20px;
-}
-.about__body {
-}
-.about__title {
-}
+
 .title {
+	border-radius: 20px;
+	padding-left: 20px;
+	margin-bottom: 15px;
+	width: 200px;
+	font-size: 20px;
+	color: white;
+	background-color: #333131;
+	text-transform: uppercase;
+	letter-spacing: 5px;
 }
-.about__subtitle {
+
+.subtitle {
+	font-size: 18px;
 }
+
+.profile {
+    padding: 20px;
+	background-color: #b9a389;
+}
+.profile__row {
+	display: flex;
+}
+
+.profile__img {
+	padding: 20px 60px;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+.profile__body {
+	padding: 50px;
+}
+.profile__title {
+}
+
+.profile__subtitle {
+}
+
+.aside {
+	padding: 60px 0;
+	background-color: #eeece8;
+}
+.contact,
+.skills {
+	margin-bottom: 60px;
+}
+
+.contact__title {
+	margin-bottom: 15px;
+}
+
+.contact__list {
+	list-style: none;
+}
+.contact__item {
+	margin-bottom: 5px;
+	font-size: 18px;
+}
+
+.skills__subtitle {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.skills__list>li {
+	margin-left: 10px;
+	margin-bottom: 5px;
+	list-style: none;
+	font-size: 18px;
+}
+
+.english__level {
+	font-size: 50px;
+	font-weight: 700;
+}
+.english__desc {
+	font-size: 18px;
+
+}
+
 .footer {
-	/* height: 45px; */
-	padding: 10px 0;
 	background-color: #333131;
 }
 
@@ -88,7 +155,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	color: #fff;
+	padding: 10px 0;
 }
 
 .footer__text {
@@ -102,15 +169,11 @@ body {
     text-decoration: none;
 }
 
-.footer__rss {
-	color: #fff;
-}
-.footer__link_rss {
-	color: #fff;
+.footer__link_githab>a>span {
+margin-right: 6px;
 }
 
 .footer_logo {
 	width: 100px;
 	height: 45px;
-	color: #fff;
 }
