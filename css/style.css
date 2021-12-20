@@ -2,51 +2,62 @@
 	font-family: 'Poppins', sans-serif
 }
 
+/* Прижать footer */
 html,
 body {
 	height: 100vh;
 	margin: 0;
-    padding: 0;
-}
-
-.container {
-	max-width: 1140px;
-	margin: 0 auto;
+	padding: 0;
+	scroll-behavior: smooth;
+	background-color: #f7e3cc;
+	
 }
 
 .wrapper {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-}
-
-.header {
-	background-color: #b9a389;
-}
-
-.menu {
-	display: flex;
-    justify-content: space-between;
-    padding: 16px 50px;
-    margin: 0;
-    list-style: none;
-}
-
-.menu__link {
-	font-size: 20px;
-    color: white;
-    text-decoration: none;
-}
-
-.menu__link:hover {
-	color: #333131;
-	transition: 0.5s;
+	background-color: white;
+	box-shadow: -12px 18px 12px rgb(120 120 120);
 }
 
 .main {
 	flex: 1 1 auto;
 }
 
+/* Контейнер */
+.wrapper {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+/* Шапка */
+.header {
+	background-color: #b9a389;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 50px;
+	margin: 0;
+	list-style-type: none;
+}
+
+.menu__link {
+	padding: 0 20px;
+	line-height: 50px;
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+}
+
+.menu__link:hover {
+	color: #333131;
+	transition: .5s;
+}
+
+/* Секция Имя */
 .name {
 	min-height: 85px;
 	padding: 40px 0px;
@@ -55,21 +66,22 @@ body {
 
 .name__body {
 	text-align: center;
-    text-transform: uppercase;
-    color:white;
+	text-transform: uppercase;
+	color:white;
 }
 .name__title {
 	font-size: 40px;
-    font-weight: 700;
+	font-weight: 700;
 }
 .name__subtitle {
 	font-size: 20px;
 }
 
+/* Заголовок на блок с информацией */
 .title {
 	border-radius: 20px;
 	padding-left: 20px;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	width: 200px;
 	font-size: 20px;
 	color: white;
@@ -78,12 +90,14 @@ body {
 	letter-spacing: 5px;
 }
 
-.subtitle {
+/* Содержимое блока с информацией */
+.text {
 	font-size: 18px;
 }
 
+/* Блок с информацией */
 .profile {
-    padding: 20px;
+	padding: 20px;
 	background-color: #b9a389;
 }
 .profile__row {
@@ -102,15 +116,33 @@ body {
 .profile__title {
 }
 
-.profile__subtitle {
+.profile__text {
+}
+
+/* Стили для двух колонок */
+.main__wrap {
+	display: flex;
 }
 
 .aside {
+	width: 40%;
 	padding: 60px 0;
 	background-color: #eeece8;
 }
+
+.main__info {
+	width: 60%;
+	padding: 60px 0;
+}
+
+/* Блок с информацией */
 .contact,
-.skills {
+.skills,
+.english,
+.education,
+.experience,
+.code {
+	padding: 0 50px;
 	margin-bottom: 60px;
 }
 
@@ -119,11 +151,19 @@ body {
 }
 
 .contact__list {
-	list-style: none;
-}
-.contact__item {
 	margin-bottom: 5px;
 	font-size: 18px;
+	list-style-type: none;
+}
+.contact__item>a {
+	color: black;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+.contact__item>a:hover {
+	color: #b9a389;
+	transition: .3s;
 }
 
 .skills__subtitle {
@@ -134,19 +174,53 @@ body {
 .skills__list>li {
 	margin-left: 10px;
 	margin-bottom: 5px;
-	list-style: none;
+	list-style-type: none;
 	font-size: 18px;
 }
 
 .english__level {
+	padding-left: 105px;
 	font-size: 50px;
 	font-weight: 700;
 }
-.english__desc {
-	font-size: 18px;
 
+section:last-child {
+	margin-bottom: 0px;
 }
 
+.education__list {
+	font-size: 18px;
+	list-style-type: none;	
+}
+
+.experience__subtitle {
+	margin-bottom: 0px;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.experience__list {
+	font-size: 18px;
+	color: black;
+	list-style-type: none;
+}
+
+.experience__link {
+	color: #b9a389;
+	text-decoration: none;
+}
+
+.experience__link:hover {
+	color: black;
+	transition: .3s;
+}
+
+.code__text {
+	font-size: 16px;
+	line-height: 18px;
+}
+
+/* Подвал */
 .footer {
 	background-color: #333131;
 }
@@ -155,18 +229,18 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 0;
-}
-
-.footer__text {
-	font-size: 20px;
-    color: white;
+	padding: 10px 85px;
 }
 
 .footer__link_githab>a {
 	font-size: 20px;
-    color: white;
-    text-decoration: none;
+	color: white;
+	text-decoration: none;
+}
+
+.footer__text {
+	font-size: 20px;
+	color: white;
 }
 
 .footer__link_githab>a>span {
