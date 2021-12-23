@@ -1,5 +1,6 @@
 * {
-	font-family: 'Poppins', sans-serif
+	font-family: 'Poppins', sans-serif;
+	font-size: 18px;
 }
 
 /* Прижать footer */
@@ -10,11 +11,10 @@ body {
 	padding: 0;
 	scroll-behavior: smooth;
 	background-color: #f7e3cc;
-	
 }
 
 .wrapper {
-	min-height: 100%;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	background-color: white;
@@ -59,7 +59,6 @@ body {
 
 /* Секция Имя */
 .name {
-	min-height: 85px;
 	padding: 40px 0px;
 	background-color: #333131;
 }
@@ -69,18 +68,19 @@ body {
 	text-transform: uppercase;
 	color:white;
 }
+
 .name__title {
 	font-size: 40px;
 	font-weight: 700;
 }
+
 .name__subtitle {
 	font-size: 20px;
-}
+} 
 
 /* Заголовок на блок с информацией */
 .title {
-	border-radius: 20px;
-	padding-left: 20px;
+	padding: 0 0 0 20px;
 	margin-bottom: 20px;
 	width: 200px;
 	font-size: 20px;
@@ -88,35 +88,29 @@ body {
 	background-color: #333131;
 	text-transform: uppercase;
 	letter-spacing: 5px;
-}
-
-/* Содержимое блока с информацией */
-.text {
-	font-size: 18px;
+	border-radius: 20px;
 }
 
 /* Блок с информацией */
 .profile {
-	padding: 20px;
+	padding: 20px 80px;
 	background-color: #b9a389;
 }
+
 .profile__row {
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .profile__img {
-	padding: 20px 60px;
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
 }
-.profile__body {
-	padding: 50px;
-}
-.profile__title {
-}
 
-.profile__text {
+.profile__body {
+	margin: 0 0 0 40px;
 }
 
 /* Стили для двух колонок */
@@ -126,13 +120,13 @@ body {
 
 .aside {
 	width: 40%;
-	padding: 60px 0;
+	padding: 60px;
 	background-color: #eeece8;
 }
 
 .main__info {
 	width: 60%;
-	padding: 60px 0;
+	padding: 60px;
 }
 
 /* Блок с информацией */
@@ -142,27 +136,21 @@ body {
 .education,
 .experience,
 .code {
-	padding: 0 50px;
 	margin-bottom: 60px;
-}
-
-.contact__title {
-	margin-bottom: 15px;
 }
 
 .contact__list {
 	margin-bottom: 5px;
-	font-size: 18px;
 	list-style-type: none;
 }
 .contact__item>a {
-	color: black;
+	color: #b9a389;
 	text-decoration: none;
 	list-style-type: none;
 }
 
 .contact__item>a:hover {
-	color: #b9a389;
+	color: black;
 	transition: .3s;
 }
 
@@ -175,11 +163,10 @@ body {
 	margin-left: 10px;
 	margin-bottom: 5px;
 	list-style-type: none;
-	font-size: 18px;
 }
 
 .english__level {
-	padding-left: 105px;
+	padding-left: 38px;
 	font-size: 50px;
 	font-weight: 700;
 }
@@ -189,18 +176,21 @@ section:last-child {
 }
 
 .education__list {
-	font-size: 18px;
+	padding: 0px;
 	list-style-type: none;	
 }
 
+.education__list>li:nth-child(2) {
+	margin-bottom: 15px;
+}
+
 .experience__subtitle {
-	margin-bottom: 0px;
 	font-size: 18px;
+	margin-bottom: 0px;
 	font-weight: 700;
 }
 
 .experience__list {
-	font-size: 18px;
 	color: black;
 	list-style-type: none;
 }
@@ -216,7 +206,6 @@ section:last-child {
 }
 
 .code__text {
-	font-size: 16px;
 	line-height: 18px;
 }
 
@@ -251,3 +240,115 @@ margin-right: 6px;
 	width: 100px;
 	height: 45px;
 }
+
+@media (max-width: 991px) {
+
+	.menu__link {
+		padding: 0 15px;
+		line-height: 40px;
+		font-size: 18px;
+	}
+	
+	.menu__link:hover {
+		color: white;
+		transition: none;
+	}
+
+	.profile {
+		padding: 20px 40px;
+	}
+
+	.profile__row {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.profile__img {
+		margin-bottom: 40px;
+	}
+
+	.profile__body {
+		margin: 0px;
+	}
+
+	.aside,
+	.main__info {
+		padding: 29px;
+	}
+
+	.contact,
+	.skills,
+	.english,
+	.education,
+	.experience,
+	.code {
+		margin-bottom: 40px;
+	}
+
+@media (max-width: 767px) {
+
+	.menu__link {
+		display: none;
+	}
+
+	.menu {
+		min-height: 40px;
+	}
+
+	.profile {
+		padding: 20px;
+	}
+
+	.main__wrap {
+		flex-wrap: wrap;
+		background-color: #eeece8;
+	}
+
+	.aside,
+	.main__info {
+		width: 100%;
+	}
+}
+
+
+/* .aside,
+	.main__info {
+		padding: 30px 0;
+	}
+
+	.title {
+		font-size: 18px;
+	}
+
+	.contact,
+	.skills,
+	.english,
+	.education,
+	.experience,
+	.code {
+		padding: 0 30px;
+		margin-bottom: 30px;
+	}
+
+	.contact__list {
+		font-size: 16px;
+	}
+
+	.skills__list>li {
+		margin-bottom: 0px;
+		font-size: 16px;
+	}
+
+	.education__list,
+	.experience__subtitle,
+	.experience__list {
+		font-size: 16px;
+	}
+
+	.code__text {
+		font-size: 16px;
+		line-height: 16px;
+	} */ 
+
+/* @media (max-width: 575px) {
+} */
