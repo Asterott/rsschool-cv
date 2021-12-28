@@ -1,4 +1,5 @@
 * {
+	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
 	font-size: 18px;
 }
@@ -27,13 +28,16 @@ body {
 
 /* Контейнер */
 .wrapper {
-	max-width: 1140px;
+	max-width: 1440px;
 	margin: 0 auto;
 }
 
-/* Шапка */
-.header {
+nav {
 	background-color: #b9a389;
+}
+
+.hamburger {
+	display: none;
 }
 
 .menu {
@@ -81,7 +85,6 @@ body {
 /* Заголовок на блок с информацией */
 .title {
 	padding: 0 0 0 20px;
-	margin-bottom: 20px;
 	width: 200px;
 	font-size: 20px;
 	color: white;
@@ -101,6 +104,16 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.profile__title,
+.contact__title,
+.skills__title,
+.english__title,
+.education__title,
+.experience__title,
+.code__title {
+	margin-bottom: 20px;
 }
 
 .profile__img {
@@ -140,6 +153,7 @@ body {
 }
 
 .contact__list {
+	padding: 0px;
 	margin-bottom: 5px;
 	list-style-type: none;
 }
@@ -157,6 +171,10 @@ body {
 .skills__subtitle {
 	font-size: 18px;
 	font-weight: 700;
+}
+
+.skills__list {
+	padding: 0px;
 }
 
 .skills__list>li {
@@ -205,20 +223,25 @@ section:last-child {
 	transition: .3s;
 }
 
+/* pre,
+code {
+	font-family: 'Poppins', sans-serif;
+} */
+
 .code__text {
-	line-height: 18px;
+	font-size: 18px;
 }
 
 /* Подвал */
 .footer {
 	background-color: #333131;
+	padding: 10px 85px;
 }
 
 .footer__row {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 85px;
 }
 
 .footer__link_githab>a {
@@ -242,7 +265,6 @@ margin-right: 6px;
 }
 
 @media (max-width: 991px) {
-
 	.menu__link {
 		padding: 0 15px;
 		line-height: 40px;
@@ -251,7 +273,6 @@ margin-right: 6px;
 	
 	.menu__link:hover {
 		color: white;
-		transition: none;
 	}
 
 	.profile {
@@ -285,14 +306,84 @@ margin-right: 6px;
 		margin-bottom: 40px;
 	}
 
-@media (max-width: 767px) {
-
-	.menu__link {
-		display: none;
+	.contact__item>a:hover {
+		color: #b9a389;
 	}
 
+	.experience__link:hover {
+		color: #b9a389;
+	}
+}
+
+@media (max-width: 767px) {
+	nav {
+		height: 50px;
+		background-color: #b9a389;
+	}
+	
 	.menu {
-		min-height: 40px;
+		position: fixed;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: -100%;
+		width: 50%;
+		height: 100vh;
+		padding: 20px 15px;
+		background-color: rgb(20%, 19%, 19%, 0.9);
+		transition: 0.6s all;
+	}
+
+	.menu__active {
+		left: 0%;
+	}
+
+	.menu__item {
+		margin: 10px 0;
+	}
+
+	.menu__link {
+		font-size: 20px;
+	}
+
+	.menu__link:hover {
+		color: white;
+		transition: none;
+	}
+
+	.hamburger {
+		display: block;
+		position: absolute;
+		right: 13px;
+		top: 16px;
+		width: 35px;
+		height: 22px;
+	}
+
+	.hamburger span {
+		display: block;
+		height: 2px;
+		width: 100%;
+		background-color: #fff;
+		margin-bottom: 6px;
+		transition: 0.5s all
+	}
+
+	.hamburger__active span {
+		margin-bottom: -2px
+	}
+
+	.hamburger__active span:nth-child(1) {
+		transform: translateY(10px) rotate(-45deg)
+	}
+
+	.hamburger__active span:nth-child(2) {
+		display: none
+	}
+
+	.hamburger__active span:nth-child(3) {
+		transform: translateY(10px) rotate(45deg)
 	}
 
 	.profile {
@@ -308,47 +399,46 @@ margin-right: 6px;
 	.main__info {
 		width: 100%;
 	}
+
+	.footer {
+		padding: 10px 50px;
+	}
 }
 
-
-/* .aside,
-	.main__info {
-		padding: 30px 0;
+@media (max-width: 575px) {
+	nav {
+		height: 40px;
 	}
 
-	.title {
-		font-size: 18px;
+	.menu {
+		width: 70%;
 	}
 
-	.contact,
-	.skills,
-	.english,
-	.education,
-	.experience,
-	.code {
-		padding: 0 30px;
-		margin-bottom: 30px;
+	.hamburger {
+		top: 11px;
 	}
 
-	.contact__list {
+	.name {
+		padding: 20px 0;
+	}
+
+	.name__title {
+		font-size: 26px;
+	}
+
+	.name__subtitle {
 		font-size: 16px;
 	}
 
-	.skills__list>li {
-		margin-bottom: 0px;
-		font-size: 16px;
+	.aside, .main__info {
+		padding: 29px 29px 0 29px;
 	}
 
-	.education__list,
-	.experience__subtitle,
-	.experience__list {
-		font-size: 16px;
+	.footer {
+		padding: 10px 15px;
 	}
 
-	.code__text {
-		font-size: 16px;
-		line-height: 16px;
-	} */ 
-
-/* @media (max-width: 575px) {
-} */
+	.footer__link_githab>a>span {
+		margin-right: 0px;
+	}
+}
