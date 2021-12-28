@@ -74,6 +74,7 @@ nav {
 }
 
 .name__title {
+	margin: 0px;
 	font-size: 40px;
 	font-weight: 700;
 }
@@ -85,6 +86,7 @@ nav {
 /* Заголовок на блок с информацией */
 .title {
 	padding: 0 0 0 20px;
+	margin: 0px;
 	width: 200px;
 	font-size: 20px;
 	color: white;
@@ -154,9 +156,13 @@ nav {
 
 .contact__list {
 	padding: 0px;
-	margin-bottom: 5px;
 	list-style-type: none;
 }
+
+.contact__list>li {
+	margin-bottom: 5px;
+}
+
 .contact__item>a {
 	color: #b9a389;
 	text-decoration: none;
@@ -168,6 +174,7 @@ nav {
 }
 
 .skills__subtitle {
+	margin: 0px;
 	font-size: 18px;
 	font-weight: 700;
 }
@@ -405,7 +412,7 @@ margin-right: 6px;
 	}
 
 	.menu {
-		width: 70%;
+		width: 80%;
 	}
 
 	.hamburger {
