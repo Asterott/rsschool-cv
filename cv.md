@@ -7,8 +7,9 @@
 **Telegram** [@Asterott](https://t.me/Asterott)
 
 ## **About Me**
-My goal is to start a career as a junior front-end developer.
-He started teaching in 2021. I have experience in layout. There is a desire to improve existing skills, as well as to master new ones.
+I am a Beginer Front End Developer.<br>
+I started my studies in 2021. My goal is to start a career as a junior front-end developer.<br>
+I like to study and learn something new. I like to read books, listen to music.
 
 ## **Skills**
 **Вasics**
