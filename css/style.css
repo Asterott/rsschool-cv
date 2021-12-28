@@ -1,0 +1,445 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	font-size: 18px;
+}
+
+/* Прижать footer */
+html,
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	background-color: #f7e3cc;
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	box-shadow: -12px 18px 12px rgb(120 120 120);
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+/* Контейнер */
+.wrapper {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+nav {
+	background-color: #b9a389;
+}
+
+.hamburger {
+	display: none;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 50px;
+	margin: 0;
+	list-style-type: none;
+}
+
+.menu__link {
+	padding: 0 20px;
+	line-height: 50px;
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+}
+
+.menu__link:hover {
+	color: #333131;
+	transition: .5s;
+}
+
+/* Секция Имя */
+.name {
+	padding: 40px 0px;
+	background-color: #333131;
+}
+
+.name__body {
+	text-align: center;
+	text-transform: uppercase;
+	color:white;
+}
+
+.name__title {
+	margin: 0px;
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.name__subtitle {
+	font-size: 20px;
+} 
+
+/* Заголовок на блок с информацией */
+.title {
+	padding: 0 0 0 20px;
+	margin: 0px;
+	width: 200px;
+	font-size: 20px;
+	color: white;
+	background-color: #333131;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	border-radius: 20px;
+}
+
+/* Блок с информацией */
+.profile {
+	padding: 20px 80px;
+	background-color: #b9a389;
+}
+
+.profile__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.profile__title,
+.contact__title,
+.skills__title,
+.english__title,
+.education__title,
+.experience__title,
+.code__title {
+	margin-bottom: 20px;
+}
+
+.profile__img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.profile__body {
+	margin: 0 0 0 40px;
+}
+
+/* Стили для двух колонок */
+.main__wrap {
+	display: flex;
+}
+
+.aside {
+	width: 40%;
+	padding: 60px;
+	background-color: #eeece8;
+}
+
+.main__info {
+	width: 60%;
+	padding: 60px;
+}
+
+/* Блок с информацией */
+.contact,
+.skills,
+.english,
+.education,
+.experience,
+.code {
+	margin-bottom: 60px;
+}
+
+.contact__list {
+	padding: 0px;
+	list-style-type: none;
+}
+
+.contact__list>li {
+	margin-bottom: 5px;
+}
+
+.contact__item>a {
+	color: #b9a389;
+	text-decoration: none;
+}
+
+.contact__item>a:hover {
+	color: black;
+	transition: .3s;
+}
+
+.skills__subtitle {
+	margin: 0px;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.skills__list {
+	padding: 0px;
+}
+
+.skills__list>li {
+	margin-left: 10px;
+	margin-bottom: 5px;
+	list-style-type: none;
+}
+
+.english__level {
+	padding-left: 38px;
+	font-size: 50px;
+	font-weight: 700;
+}
+
+section:last-child {
+	margin-bottom: 0px;
+}
+
+.education__list {
+	padding: 0px;
+	list-style-type: none;	
+}
+
+.education__list>li:nth-child(2) {
+	margin-bottom: 15px;
+}
+
+.experience__subtitle {
+	font-size: 18px;
+	margin-bottom: 0px;
+	font-weight: 700;
+}
+
+.experience__list {
+	color: black;
+	list-style-type: none;
+}
+
+.experience__link {
+	color: #b9a389;
+	text-decoration: none;
+}
+
+.experience__link:hover {
+	color: black;
+	transition: .3s;
+}
+
+.code__text {
+	font-size: 18px;
+}
+
+/* Подвал */
+.footer {
+	background-color: #333131;
+	padding: 10px 85px;
+}
+
+.footer__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer__link_githab>a {
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+}
+
+.footer__text {
+	font-size: 20px;
+	color: white;
+}
+
+.footer__link_githab>a>span {
+margin-right: 6px;
+}
+
+.footer_logo {
+	width: 100px;
+	height: 45px;
+}
+
+@media (max-width: 991px) {
+	.menu__link {
+		padding: 0 15px;
+		line-height: 40px;
+		font-size: 18px;
+	}
+	
+	.menu__link:hover {
+		color: white;
+	}
+
+	.profile {
+		padding: 20px 40px;
+	}
+
+	.profile__row {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.profile__img {
+		margin-bottom: 40px;
+	}
+
+	.profile__body {
+		margin: 0px;
+	}
+
+	.aside,
+	.main__info {
+		padding: 29px;
+	}
+
+	.contact,
+	.skills,
+	.english,
+	.education,
+	.experience,
+	.code {
+		margin-bottom: 40px;
+	}
+
+	.contact__item>a:hover {
+		color: #b9a389;
+	}
+
+	.experience__link:hover {
+		color: #b9a389;
+	}
+}
+
+@media (max-width: 767px) {
+	nav {
+		height: 50px;
+		background-color: #b9a389;
+	}
+	
+	.menu {
+		position: fixed;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: -100%;
+		width: 50%;
+		height: 100vh;
+		padding: 20px 15px;
+		background-color: rgb(20%, 19%, 19%, 0.9);
+		transition: 0.6s all;
+	}
+
+	.menu__active {
+		left: 0%;
+	}
+
+	.menu__item {
+		margin: 10px 0;
+	}
+
+	.menu__link {
+		font-size: 20px;
+	}
+
+	.menu__link:hover {
+		color: white;
+		transition: none;
+	}
+
+	.hamburger {
+		display: block;
+		position: absolute;
+		right: 13px;
+		top: 16px;
+		width: 35px;
+		height: 22px;
+	}
+
+	.hamburger span {
+		display: block;
+		height: 2px;
+		width: 100%;
+		background-color: #fff;
+		margin-bottom: 6px;
+		transition: 0.5s all
+	}
+
+	.hamburger__active span {
+		margin-bottom: -2px
+	}
+
+	.hamburger__active span:nth-child(1) {
+		transform: translateY(10px) rotate(-45deg)
+	}
+
+	.hamburger__active span:nth-child(2) {
+		display: none
+	}
+
+	.hamburger__active span:nth-child(3) {
+		transform: translateY(10px) rotate(45deg)
+	}
+
+	.profile {
+		padding: 20px;
+	}
+
+	.main__wrap {
+		flex-wrap: wrap;
+		background-color: #eeece8;
+	}
+
+	.aside,
+	.main__info {
+		width: 100%;
+	}
+
+	.footer {
+		padding: 10px 50px;
+	}
+}
+
+@media (max-width: 575px) {
+	nav {
+		height: 40px;
+	}
+
+	.menu {
+		width: 80%;
+	}
+
+	.hamburger {
+		top: 11px;
+	}
+
+	.name {
+		padding: 20px 0;
+	}
+
+	.name__title {
+		font-size: 26px;
+	}
+
+	.name__subtitle {
+		font-size: 16px;
+	}
+
+	.aside, .main__info {
+		padding: 29px 29px 0 29px;
+	}
+
+	.footer {
+		padding: 10px 15px;
+	}
+
+	.footer__link_githab>a>span {
+		margin-right: 0px;
+	}
+}
