@@ -160,7 +160,6 @@ nav {
 .contact__item>a {
 	color: #b9a389;
 	text-decoration: none;
-	list-style-type: none;
 }
 
 .contact__item>a:hover {
@@ -222,11 +221,6 @@ section:last-child {
 	color: black;
 	transition: .3s;
 }
-
-/* pre,
-code {
-	font-family: 'Poppins', sans-serif;
-} */
 
 .code__text {
 	font-size: 18px;
