@@ -1,46 +1,50 @@
-* {
-	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
-	font-size: 18px;
-}
+/*Обнуление*/
+*{padding:0;margin:0;border:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:18px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+/*--------------------*/
 
-/* Прижать footer */
 html,
 body {
-	height: 100vh;
-	margin: 0;
-	padding: 0;
-	scroll-behavior: smooth;
+	font-family: 'Poppins', sans-serif;
 	background-color: #f7e3cc;
+	scroll-behavior: smooth;
 }
 
+/* Прижать footer, Обертка, Контейнер */
 .wrapper {
 	min-height: 100vh;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	background-color: white;
 	box-shadow: -12px 18px 12px rgb(120 120 120);
-}
 
+	max-width: 1440px;
+	margin: 0 auto;
+}
 .main {
 	flex: 1 1 auto;
 }
 
-/* Контейнер */
-.wrapper {
-	max-width: 1440px;
-	margin: 0 auto;
-}
-
-nav {
+/* Шапка */
+.menu {
 	background-color: #b9a389;
 }
 
-.hamburger {
-	display: none;
-}
-
-.menu {
+.menu__list {
 	display: flex;
 	justify-content: space-between;
 	padding: 10px 50px;
@@ -53,12 +57,15 @@ nav {
 	line-height: 50px;
 	font-size: 20px;
 	color: white;
-	text-decoration: none;
 }
 
 .menu__link:hover {
 	color: #333131;
-	transition: .5s;
+	transition: .4s;
+}
+
+.hamburger {
+	display: none;
 }
 
 /* Секция Имя */
@@ -74,7 +81,7 @@ nav {
 }
 
 .name__title {
-	margin: 0px;
+	margin-bottom: 10px;
 	font-size: 40px;
 	font-weight: 700;
 }
@@ -86,13 +93,13 @@ nav {
 /* Заголовок на блок с информацией */
 .title {
 	padding: 0 0 0 20px;
-	margin: 0px;
-	width: 200px;
+	width: 230px;
 	font-size: 20px;
 	color: white;
 	background-color: #333131;
 	text-transform: uppercase;
 	letter-spacing: 5px;
+	line-height: 25px;
 	border-radius: 20px;
 }
 
@@ -113,20 +120,27 @@ nav {
 .skills__title,
 .english__title,
 .education__title,
-.experience__title,
+.courses__title,
 .code__title {
 	margin-bottom: 20px;
 }
 
 .profile__img {
-	width: 200px;
-	height: 200px;
+	flex: 0 0 200px;
+}
+
+.profile__img img {
+	max-width: 100%;
 	border-radius: 50%;
 }
 
 .profile__body {
 	flex: 1 1 auto;
-	margin: 0 0 0 40px;
+	margin: 0 0 0 60px;
+}
+
+.profile__text {
+    line-height: 20px;
 }
 
 /* Стили для двух колонок */
@@ -135,13 +149,13 @@ nav {
 }
 
 .aside {
-	width: 40%;
-	padding: 60px;
+	width: 27%;
+	padding: 60px 30px;
 	background-color: #eeece8;
 }
 
 .main__info {
-	width: 60%;
+	width: 73%;
 	padding: 60px;
 }
 
@@ -150,23 +164,18 @@ nav {
 .skills,
 .english,
 .education,
+.courses,
 .experience,
 .code {
 	margin-bottom: 60px;
 }
 
-.contact__list {
-	padding: 0px;
-	list-style-type: none;
-}
-
-.contact__list>li {
-	margin-bottom: 5px;
+.contact__list li {
+	margin-bottom: 8px;
 }
 
 .contact__item>a {
 	color: #b9a389;
-	text-decoration: none;
 }
 
 .contact__item>a:hover {
@@ -175,19 +184,13 @@ nav {
 }
 
 .skills__subtitle {
-	margin: 0px;
-	font-size: 18px;
+	margin-bottom: 10px;
 	font-weight: 700;
 }
 
-.skills__list {
-	padding: 0px;
-}
-
-.skills__list>li {
+.skills__list li {
 	margin-left: 10px;
-	margin-bottom: 5px;
-	list-style-type: none;
+	margin-bottom: 8px;
 }
 
 .english__level {
@@ -200,38 +203,74 @@ section:last-child {
 	margin-bottom: 0px;
 }
 
-.education__list {
-	padding: 0px;
-	list-style-type: none;	
+.education__list li,
+.courses__list li {
+	margin-bottom: 12px;
 }
 
-.education__list>li:nth-child(2) {
-	margin-bottom: 15px;
+.education__list li:last-child,
+.courses__list li:last-child {
+	margin-bottom: 0px;
+}
+
+.courses__list span{
+	font-weight: 700
+}
+
+.experience__title {
+	margin-bottom: 30px;
+}
+
+.experience__body {
+	margin-bottom: 40px;
 }
 
 .experience__subtitle {
-	font-size: 18px;
-	margin-bottom: 0px;
-	font-weight: 700;
+	font-size: 20px;
+	margin-bottom: 20px;
 }
 
-.experience__list {
-	color: black;
-	list-style-type: none;
+.experience__row {	
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
-.experience__link {
-	color: #b9a389;
-	text-decoration: none;
+.experience__column {
+	margin: 0 -5px;
+	width: 300px;
 }
 
-.experience__link:hover {
-	color: black;
-	transition: .3s;
+.experience__subtitle {
+    text-align: center;
+    font-weight: 700;
 }
 
-.code__text {
-	font-size: 18px;
+.experience__item {
+	padding: 0 5px;
+	text-align: center;
+}
+
+.experience__item:hover {
+    box-shadow: 0px 0px 15px rgb(120 120 120);
+}
+
+.experience__label {
+	margin-bottom: 10px;
+	font-size: 16px;
+    line-height: 24px;
+}
+
+.experience__img {
+	margin-bottom: 10px;
+}
+
+.experience__img img {
+	max-width: 100%;
+}
+
+.experience__desc {
+	font-size: 16px;
 }
 
 /* Подвал */
@@ -246,10 +285,9 @@ section:last-child {
 	align-items: center;
 }
 
-.footer__link_githab>a {
+.footer__link_githab a {
 	font-size: 20px;
 	color: white;
-	text-decoration: none;
 }
 
 .footer__text {
@@ -257,13 +295,49 @@ section:last-child {
 	color: white;
 }
 
-.footer__link_githab>a>span {
-margin-right: 6px;
+.footer__link_githab a span {
+	margin-right: 6px;
 }
 
 .footer_logo {
 	width: 100px;
 	height: 45px;
+}
+
+@media (max-width: 1399px) {
+	.experience__column {
+		width: 250px;
+	}
+}
+
+@media (max-width: 1199px) {
+    .profile {
+        padding: 20px 60px;
+    }
+
+    .aside {
+        width: 35%;
+    }
+
+	.main__info {
+        width: 65%;
+		padding: 60px 30px;
+	}
+
+	.experience__body {
+		max-width: 700px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+
+	.experience__column {
+		width: 300px;
+		margin-bottom: 30px;
+	}
+
+	.experience__column:last-child {
+		margin-bottom: 0px;
+	}
 }
 
 @media (max-width: 991px) {
@@ -278,52 +352,74 @@ margin-right: 6px;
 	}
 
 	.profile {
-		padding: 20px 40px;
+		padding: 20px 60px 40px;
 	}
 
 	.profile__row {
 		flex-direction: column;
-		align-items: center;
+		align-items: stretch;
 	}
 
 	.profile__img {
 		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.profile__img img {
+		max-width: 200px;
 	}
 
 	.profile__body {
 		margin: 0px;
 	}
 
-	.aside,
+	.aside {
+		width: 40%;
+		padding: 30px 20px;
+	}
+	
 	.main__info {
-		padding: 29px;
+		width: 60%;
+		padding: 30px 40px;
 	}
 
 	.contact,
 	.skills,
 	.english,
 	.education,
+	.courses,
 	.experience,
 	.code {
 		margin-bottom: 40px;
 	}
 
-	.contact__item>a:hover {
+	.contact__item a:hover {
 		color: #b9a389;
 	}
 
 	.experience__link:hover {
 		color: #b9a389;
 	}
+
+	.experience__row {	
+		justify-content: center
+	}
 }
 
 @media (max-width: 767px) {
-	nav {
+	header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 5;
+	}
+	.menu {
 		height: 50px;
 		background-color: #b9a389;
 	}
 	
-	.menu {
+	.menu__list {
 		position: fixed;
 		flex-direction: column;
 		justify-content: center;
@@ -337,7 +433,7 @@ margin-right: 6px;
 		transition: 0.6s all;
 	}
 
-	.menu__active {
+	.menu__list.active {
 		left: 0%;
 	}
 
@@ -372,24 +468,25 @@ margin-right: 6px;
 		transition: 0.5s all
 	}
 
-	.hamburger__active span {
+	.hamburger.active span {
 		margin-bottom: -2px
 	}
-
-	.hamburger__active span:nth-child(1) {
+	.hamburger.active span:nth-child(1) {
 		transform: translateY(10px) rotate(-45deg)
 	}
-
-	.hamburger__active span:nth-child(2) {
+	.hamburger.active span:nth-child(2) {
 		display: none
 	}
-
-	.hamburger__active span:nth-child(3) {
+	.hamburger.active span:nth-child(3) {
 		transform: translateY(10px) rotate(45deg)
 	}
 
+	.name {
+		padding: 90px 0px 40px 0px;
+	}
+
 	.profile {
-		padding: 20px;
+		padding: 30px 40px 40px;
 	}
 
 	.main__wrap {
@@ -397,9 +494,18 @@ margin-right: 6px;
 		background-color: #eeece8;
 	}
 
-	.aside,
+	.aside {
+		width: 100%;
+		padding: 30px 40px 0px 40px;
+	}
+
 	.main__info {
 		width: 100%;
+		padding: 30px 40px;
+	}
+
+	.experience__column {
+		width: 500px;
 	}
 
 	.footer {
@@ -408,11 +514,11 @@ margin-right: 6px;
 }
 
 @media (max-width: 575px) {
-	nav {
+	.menu {
 		height: 40px;
 	}
 
-	.menu {
+	.menu__list {
 		width: 80%;
 	}
 
@@ -421,7 +527,7 @@ margin-right: 6px;
 	}
 
 	.name {
-		padding: 20px 0;
+		padding: 60px 0px 20px 0px;
 	}
 
 	.name__title {
@@ -432,15 +538,20 @@ margin-right: 6px;
 		font-size: 16px;
 	}
 
-	.aside, .main__info {
-		padding: 29px 29px 0 29px;
+	.profile {
+		padding: 20px 20px 30px;
 	}
 
+	.aside,
+	.main__info {
+		padding: 20px;
+	}
+	
 	.footer {
 		padding: 10px 15px;
 	}
 
-	.footer__link_githab>a>span {
+	.footer__link_githab a span {
 		margin-right: 0px;
 	}
 }

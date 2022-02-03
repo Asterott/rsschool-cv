@@ -12,58 +12,59 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<nav>
-				<div class="container">
-					<ul class="menu">
-						<li class="menu__item">
-							<a href="#contact" class="menu__link">Contact</a>
-						</li>
+			<div class="container">
+				<nav class="header__menu menu">
+					<ul class="menu__list">
 						<li class="menu__item">
 							<a href="#profile" class="menu__link">Profile</a>
+						</li>
+						<li class="menu__item">
+							<a href="#contact" class="menu__link">Contact</a>
 						</li>
 						<li class="menu__item">
 							<a href="#skills" class="menu__link">Skills</a>
 						</li>
 						<li class="menu__item">
-							<a href="#code" class="menu__link">Code</a>
+							<a href="#education" class="menu__link">Education</a>
 						</li>
 						<li class="menu__item">
 							<a href="#experience" class="menu__link">Experience</a>
 						</li>
 						<li class="menu__item">
-							<a href="#education" class="menu__link">Education</a>
+							<a href="#code" class="menu__link">Code</a>
 						</li>
 						<li class="menu__item">
 							<a href="#english" class="menu__link">English</a>
 						</li>
 					</ul>
-				</div>
-				<div class="hamburger">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</nav>
+				</nav>
+			</div>
+			<div class="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 		</header>
 		<main class="main">
 			<section class="name">
 				<div class="container">
 					<div class="name__body">
 						<h1 class="name__title">Evgeniy Afanasiev</h1>
-						<div class="name__subtitle">Beginner Front-End Developer</div>
+						<div class="name__subtitle">Junior Front-End Developer</div>
 					</div>
 				</div>
 			</section>
 			<section class="profile" id="profile">
 				<div class="container">
 					<div class="profile__row">
-						<img src="assets/img/photo.jpg" alt="photo" class="profile__img">
+						<div class="profile__img">
+							<img src="assets/img/photo.jpg" alt="photo">
+						</div>
 						<div class="profile__body">
 							<h2 class="profile__title title">Profile</h2>
 							<div class="profile__text text">
-								I am a Beginer Front End Developer.<br>
-								I started my studies in 2021. My goal is to start a career as a junior front-end developer.<br>
-								I like to study and learn something new. I like to read books, listen to music.
+                                I like programming. It is fascinating and interesting. I have a main job, programming is a  hobby for me. I like working and see the results of my work.<br>
+                                I like learning something new.
 							</div>
 						</div>
 					</div>
@@ -75,16 +76,16 @@
 						<section class="contact" id="contact">
 							<h2 class="contact__title title">Contact</h2>
 							<ul class="contact__list">
-								<li class="contact__item">Vitebsk, Belarus</li>
 								<li class="contact__item">
 									Phone: <a href="tel:+375295957638">+375(29)595-76-38</a></li>
 								<li class="contact__item">
-									Email: <a href="mailto:asterotten140388@gmail.com">asterotten140388@gmail.com</a></li>
-								<li class="contact__item">
 									GitHub: <a href="https://github.com/Asterott">Asterott</a></li>
-								<li class="contact__item">Discord: Asterott#7972</li>
 								<li class="contact__item">
 									Telegram: <a href="https://t.me/asterott">Cerberus</a></li>
+								<li class="contact__item">
+									Email: <a href="mailto:asterotten140388@gmail.com">asterotten140388@gmail.com</a></li>
+								<li class="contact__item">Discord: Asterott#7972</li>
+								<li class="contact__item">Vitebsk, Belarus</li>
 							</ul>
 						</section>
 						<section class="skills" id="skills">
@@ -92,11 +93,14 @@
 							<h3 class="skills__subtitle">Basic</h3>
 							<ul class="skills__list">
 								<li>HTML, CSS</li>
-								<li>VSCode</li>
-								<li>Git</li>
+								<li>SASS/SCSS</li>
+								<!-- <li>JavaScript</li> -->
+								<li>Git/Github</li>
 								<li>BEM Methodology</li>
-								<li>Gulp</li>
-								<li>Bootstrap Grid</li>
+								<li>VSCode</li>
+								<li>Figma</li>
+								<!-- <li>Gulp</li>
+								<li>Bootstrap Grid</li> -->
 							</ul>
 						</section>  
 						<section class="english" id="english">
@@ -110,24 +114,80 @@
 						<section class="education" id="education">
 							<h2 class="education__title title">Education</h2>
 							<ul class="education__list">
-								<li>Professional Lyceum No. 5 Instrumentation</li>
-								<li>Technological College</li>
-								<li>Udemy - WEB-Developer</li>
+								<li>Vitebsk State:</li>
+								<li>Vocational Instrumentation Lyceum 5</li>
+								<li>Polytechnic College</li>
+							</ul>
+						</section>
+						<section class="courses">
+							<h2 class="courses__title title">Courses</h2>
+							<ul class="courses__list">
+								<li><span>Udemy</span> - WEB-Developer</li>
+                                <li><span>RS School</span> - JS/FE Pre-School 2022</li>
 							</ul>
 						</section>
 						<section class="experience" id="experience">
 							<h2 class="experience__title title">Experience</h2>
-							<h3 class="experience__subtitle">Online video course Udemy</h3>
-							<ul class="experience__list">
-								<li>Wordpress: <a class="experience__link" href="https://github.com/Asterott/Wordpress">CODE</a></li>
-								<li>Uber: <a class="experience__link" href="https://github.com/Asterott/uber">CODE</a>
-									<a class="experience__link" href="https://asterott.github.io/2021/Uber/">PROJECT</a>
-								</li>
-							</ul>
-							<h3 class="experience__subtitle">Online training on YouTube</h3>
+							<h3 class="experience__subtitle">Udemy - WEB-Developer</h3>
+							<div class="experience__body">
+								<div class="experience__row">
+									<div class="experience__column">
+										<div class="experience__item">
+											<div class="experience__label">Wordpress</div>
+											<div class="experience__img">
+												<a href="https://asterott.github.io/wordpress/">
+													<img src="assets/img/project/1.jpg" alt="wordpress">
+												</a>
+											</div>
+											<div class="experience__desc">HTML, CSS, JS</div>
+										</div>
+									</div>
+
+									<div class="experience__column">
+										<div class="experience__item">
+											<div class="experience__label">Uber</div>
+												<div class="experience__img">
+													<a href="https://asterott.github.io/uber/src/">
+														<img src="assets/img/project/2.jpg" alt="uber">
+													</a>
+												</div>
+											<div class="experience__desc">HTML, CSS, JS, Sass</div>
+										</div>
+									</div>
+
+									<div class="experience__column">
+										<div class="experience__item">
+											<div class="experience__label">Pulse (in progress)</div>
+												<div class="experience__img">
+													<a href="https://rolling-scopes-school.github.io/asterott-JSFEPRESCHOOL/portfolio/">
+														<img src="assets/img/project/3.jpg" alt="pulse">
+													</a>
+												</div>
+											<div class="experience__desc">HTML, CSS, JS, Scss</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<h3 class="experience__subtitle">RS School</h3>
+							<div class="experience__body">
+								<div class="experience__row">
+									<div class="experience__column">
+										<div class="experience__item">
+											<div class="experience__label">Portfolio</div>
+											<div class="experience__img">
+												<a href="https://rolling-scopes-school.github.io/asterott-JSFEPRESCHOOL/portfolio/">
+													<img src="assets/img/project/4.jpg" alt="portfolio">
+												</a>
+											</div>
+											<div class="experience__desc">HTML, CSS, JS</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</section>
 						<section class="code" id="code">
-							<h2 class="code__title title">Code</h2>
+							<h2 class="code__title title">Code example</h2>
 							<pre class="code__text">
 								<code>
 function multiply(a, b) {
@@ -150,7 +210,7 @@ function multiply(a, b) {
 							GitHub
 						</a>
 					</div>
-					<div class="footer__text">2021</div>
+					<div class="footer__text">2022</div>
 					<div class="footer__rss">
 						<a href="https://rs.school/js/">
 							<img src="assets/logo/rss.svg" alt="footer_logo" class="footer_logo">
@@ -160,7 +220,6 @@ function multiply(a, b) {
 			</div>
 		</footer>
 	</div>
-
 	<script src="js/script.js"></script>
 </body>
 </html>
